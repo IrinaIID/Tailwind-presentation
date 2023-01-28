@@ -20,7 +20,254 @@
           <h1>T a i l w i n d C S S</h1>
           <p>*  PRESENTATION BY IRINA ISHCHENKO  *</p>
         </section>
-				<section></section>
+				<section>
+          <ul>
+            <li>TailwindCss ?</li>
+            <li>Benefits</li>
+            <li>Documentation</li>
+            <li>Configuration</li>
+            <li>TailwindCss & React</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h1>TailwindCss ?</h1>
+          </section>
+          <section>
+            <a href="https://tailwindcss.com/">
+              <img src="./assets/logo.svg" alt="logo" class="demo-logo">
+            </a>
+            <p>A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.</p>
+          </section>
+          <section>
+            <p>How to apply?</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+            < div class="text-sky-500 dark:text-sky-400">
+                TailwindCss
+            < /div >
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Benefits</h1>
+            <ul>
+              <li>simple clear syntax</li>
+              <li>ready-made library of various styles</li>
+              <li>quick change of project theme (light/dark)</li>
+              <li>quick creation of adaptive</li>
+            </ul>
+          </section>
+          <section>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              < div class="text-sky-500 dark:text-sky-400">
+                  TailwindCss
+              < /div >
+              </code></pre>
+              <p> text-sky-500______and_____dark:text-sky-400</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Documentation</h1>
+            <a href="https://tailwindcss.com/docs/installation">https://tailwindcss.com/docs/installation</a>
+          </section>
+          <section>
+            <h3>Installation</h2>
+            <img src="./assets/install.jpg" alt="install-img">
+          </section>
+          <section>
+            <h3>Tailwind CLI</h3>
+            <p>1. Install Tailwind CSS (terminal)</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              npm install -D tailwindcss
+              npx tailwindcss init
+              </code></pre>
+          </section>
+          <section>
+            <p>2. Configure your template paths (tailwind.config.js)</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              /** @type {import('tailwindcss').Config} */
+              module.exports = {
+                content: ["./src/**/*.{html,js}"],
+                theme: {
+                  extend: {},
+                },
+                plugins: [],
+              }
+              </code></pre>
+          </section>
+          <section>
+            <p>3. Add the Tailwind directives to your CSS (src/input.css)</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              @tailwind base;
+              @tailwind components;
+              @tailwind utilities;
+              </code></pre>
+          </section>
+          <section>
+            <p>4. Start the Tailwind CLI build process (Terminal)</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+              </code></pre>
+          </section>
+          <section>
+            <p>5. Start using Tailwind in your HTML (src/index.html)</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              < !doctype html>
+              < html>
+              < head>
+                < meta charset="UTF-8">
+                < meta name="viewport" content="width=device-width, initial-scale=1.0">
+                < link href="/dist/output.css" rel="stylesheet">
+              < /head>
+              < body>
+                < h1 class="text-3xl font-bold underline">
+                  Hello world!
+                < /h1>
+              < /body>
+              < /html>
+              </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Documentation</h1>
+            <p>what styles to use?</p>
+          </section>
+          <section>
+            <img src="./assets/prop-1.jpg" alt="img">
+          </section>
+          <section>
+            <img src="./assets/prop-2.jpg" alt="img">
+          </section>
+          <section>
+            <img src="./assets/prop-3.jpg" alt="img">
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Configuration</h1>
+            <p>tailwind.config.js</p>
+          </section>
+          <section>
+            <p>terminal:</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              npx tailwindcss init
+            </code></pre>
+            <p>tailwind.config.js:</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              module.exports = {
+                content: [],
+                theme: {
+                  extend: {},
+                },
+                plugins: [],
+              }
+            </code></pre>
+          </section>
+          <section>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              module.exports = {
+                content: ['./src/**/*.{html,js}'],
+                theme: {
+                  colors: {
+                    'blue': '#1fb6ff',
+                    'purple': '#7e5bef',
+                    'pink': '#ff49db',
+                    'orange': '#ff7849',
+                    'green': '#13ce66',
+                    'yellow': '#ffc82c',
+                    'gray-dark': '#273444',
+                    'gray': '#8492a6',
+                    'gray-light': '#d3dce6',
+                  },
+                  fontFamily: {
+                    sans: ['Graphik', 'sans-serif'],
+                    serif: ['Merriweather', 'serif'],
+                  },
+                  extend: {
+                    spacing: {
+                      '8xl': '96rem',
+                      '9xl': '128rem',
+                    },
+                    borderRadius: {
+                      '4xl': '2rem',
+                    }
+                  }
+                },
+              }
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Configuration</h1>
+            <a href="https://tailwindcss.com/docs/dark-mode">https://tailwindcss.com/docs/dark-mode</a>
+          </section>
+          <section>
+            <p>tailwind.config.js</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              module.exports = {
+                darkMode: 'class',
+                // ...
+              }
+            </code></pre>
+            <p>html file:</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              < html>
+              < body>
+                < div class="bg-white dark:bg-black">
+                < /div>
+              < /body>
+              < /html>
+
+
+              < html class="dark">
+              < body>
+                < div class="bg-white dark:bg-black">
+                < /div>
+              < /body>
+              < /html>
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Documentation</h1>
+            <a href="https://tailwindcss.com/docs/screens">https://tailwindcss.com/docs/screens</a>
+          </section>
+          <section>
+            <h3>mobile-first approach</h3>
+            <p>tailwind.config.js</p>
+            <pre><code class="hljs javascript" data-trim data-line-numbers>
+              module.exports = {
+                theme: {
+                  screens: {
+                    'sm': '640px',
+                    // => @media (min-width: 640px) { ... }
+
+                    'md': '768px',
+                    // => @media (min-width: 768px) { ... }
+
+                    'lg': '1024px',
+                    // => @media (min-width: 1024px) { ... }
+
+                    'xl': '1280px',
+                    // => @media (min-width: 1280px) { ... }
+
+                    '2xl': '1536px',
+                    // => @media (min-width: 1536px) { ... }
+                  }
+                }
+              }
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <h1>TailwindCss & React</h1>
+          <a href="https://tailwindcss.com/docs/installation">https://tailwindcss.com/docs/installation</a>
+        </section>
 			</div>
 		</div>
 
